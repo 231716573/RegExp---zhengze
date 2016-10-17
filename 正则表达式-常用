@@ -3,6 +3,7 @@
 
 2、简单的邮件格式
 /^\w+@\w+.\w+$/
+/([\w\-]+\@[\w\-]+\.[\w\-]+)/
 
 3、 目标字符串：<SPAN style="FONT-FAMILY: 宋体; BACKGROUND: white; COLOR: #333333; FONT-SIZE: 12px; mso-ascii-font-family: simsun; mso-hansi-font-family: simsun; mso-bidi-font-family: 宋体; mso-font-kerning: 0">想要的内容</SPAN>
     结果：想要的内容
@@ -21,3 +22,10 @@
 
 7、最后一位必须是英文，其他必须是数字
 [0-9]+[A-Za-z]$
+
+
+9、检测 URL 地址是否合法
+/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i
+
+10、是否只包含字母跟空格
+/^[a-zA-Z ]*$/
