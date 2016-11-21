@@ -38,5 +38,8 @@ var str = <p>12345600000，12345，456 &nbsp;&nbsp;</p><p>12345699999，12345,11
 var reg = new RegExp("("+tmp[j]+")([^0-9])","g");  //tmp[j]是对应的数字
 str.replace(reg,"<font style=\"color:red;\">$1</font>$2"); //$1为组1，$2为组2
 
+网上大神的回复：
+(?<!\d)\d{1,10}(?!\d) 或者 \D(\d{1,10})\D
+
 
 
