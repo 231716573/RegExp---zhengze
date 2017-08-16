@@ -1,3 +1,6 @@
+## 常用JS正则：
+***
+
 #### 1、匹配 6-10 位 数字和字母结合（不能单独字母或者数字）
 ```javascript
 /^(?!([a-zA-Z]+|\d+)$)[a-zA-Z\d]{6,10}$/
@@ -58,7 +61,7 @@
 ```
 
 #### 11、匹配所有不满11位的数字
-var str = \<p>12345600000，12345，456 &nbsp;&nbsp;\</p>\<p>12345699999，12345,11111111111 &nbsp; &nbsp;\</p>\<p>123456 &nbsp; &nbsp;\</p>
+var str = \<p>12345600000，12345，456 &nbsp;&nbsp;\</p>\<p>12345699999，12345,11111111111 &nbsp; &nbsp;\</p>\<p>123456 &nbsp; &nbsp;\</p><br>
 比如12345、123456 不足11位，匹配里面所有的12345跟123456，但是不匹配12345600000、12345699999、11111111111
 ```javascript
 var reg = new RegExp("("+tmp[j]+")([^0-9])","g");  //tmp[j]是对应的数字
@@ -80,4 +83,10 @@ var pngReg = subject.match(/\/(\w+\.(?:png|jpg|jpeg|gif|bmp))$/i);
 判断：
 ```javascript
 if(pngReg instanceof Array){}
+```
+
+
+#### 13、判断手机还是平板，或者PC
+```javascript
+var device = /android|iphone|ipad|ipod|webos|iemobile|opear mini|linux/i.test(navigator.userAgent.toLowerCase());
 ```
